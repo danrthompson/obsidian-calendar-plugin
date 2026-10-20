@@ -1,13 +1,13 @@
 {
-  "name": "calendar",
-  "version": "1.5.10",
+  "name": "dan-calendar",
+  "version": "1.5.11",
   "description": "Calendar view of your daily notes",
   "author": "liamcain",
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "lint": "svelte-check && eslint . --ext .ts",
-    "build": "npm run lint && rollup -c",
+    "lint": "node -r ./scripts/legacy-node.cjs node_modules/svelte-check/bin/svelte-check && eslint . --ext .ts",
+    "build": "npm run lint && node -r ./scripts/legacy-node.cjs node_modules/rollup/dist/bin/rollup -c",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test -- --watch"
   },

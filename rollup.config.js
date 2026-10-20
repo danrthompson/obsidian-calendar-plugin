@@ -14,6 +14,15 @@ export default {
   },
   external: ["obsidian", "fs", "os", "path"],
   plugins: [
+    {
+      name: "fork-plugin-settings",
+      transform(code, id) {
+        if (!id.includes("obsidian-daily-notes-interface/dist/main.js")) return null;
+        const calls = code.match(/getPlugin\("calendar"\)/g) || [];
+        if (calls.length !== 2) throw new Error("Review Calendar settings lookups after updating the daily-notes interface");
+        return { code: code.replace(/getPlugin\("calendar"\)/g, 'getPlugin("dan-calendar")'), map: null };
+      },
+    },
     svelte({
       emitCss: false,
       preprocess: autoPreprocess(),

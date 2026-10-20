@@ -1,10 +1,10 @@
 {
-  "id": "calendar",
-  "name": "Calendar",
-  "description": "Calendar view of your daily notes",
-  "version": "1.5.10",
-  "author": "Liam Cain",
-  "authorUrl": "https://github.com/liamcain/",
+  "id": "dan-calendar",
+  "name": "Dan Calendar",
+  "description": "Calendar fork that follows the exact Daily Notes folder and date format.",
+  "version": "1.5.11",
+  "author": "Liam Cain; fork maintained by Dan Thompson",
+  "authorUrl": "https://github.com/danrthompson/obsidian-calendar-plugin",
   "fundingUrl": "https://www.buymeacoffee.com/liamcain",
   "isDesktopOnly": false,
   "minAppVersion": "0.9.11"
